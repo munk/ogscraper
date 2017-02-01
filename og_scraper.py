@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from __future__ import print_function
 from collections import Counter
 
@@ -8,9 +9,11 @@ except ImportError:
     from html.parser import HTMLParser
     from urllib.request import urlopen
 
+
 def fetch_html(url):
     f = urlopen(url)
     return str(f.read())
+
 
 class OGParser(HTMLParser):
     def __init__(self):
@@ -36,8 +39,8 @@ def main():
     parser.feed(html)
     tag_count = parser.total_tag_count()
     top_five_tags = parser.top_tags(5)
-    print("There are %s tags" % tag_count)
-    print("The top 5 tags are %s" % top_five_tags)
+    print("There are {} tags".format(tag_count))
+    print("The top 5 tags are {}".format(top_five_tags))
 
 if __name__ == '__main__':
     main()
