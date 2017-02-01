@@ -14,7 +14,7 @@ OG Scraper
 
 
 ### Dependencies
-The Python standard library. It is developed against 2.7, but forwards compatible with 3.5.
+The Python standard library. It is developed against 2.7, but is also forwards compatible with 3.5.
 
 ### Testing
 
